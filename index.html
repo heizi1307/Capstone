@@ -250,6 +250,22 @@
         .but:hover button {
             opacity: 1;
         }
+        
+        .modes{
+            border: none;
+            background: none;
+            outline: none;
+            width: 0;
+            padding: 0;
+            transition: .4s;
+            line-height: 40px;
+            font-size: 15px;
+            color: wheat;
+        }
+        .enter1:hover .modes {
+            width: auto;
+            padding: 0 6px;
+        }
     </style>
 </head>
 
@@ -271,9 +287,15 @@
     </div>
     <form class="enter1" autocomplete="on" action="/cgi-bin/test.py" method="get">
         <input class="enter2" type="text" id="term" name="term" placeholder="Enter sentences here">
+        <select class="modes">
+            <option>Model1</option>
+            <option>Model2</option>
+            <option>Model3</option>
+        </select>
         <a class="enter3">
             <img src="enter/enter.png" style="width: 30px;">
         </a>
+        
         <input type=submit style="display: none;">
     </form>
     <div class="result" id='toBeChanged'></div>
